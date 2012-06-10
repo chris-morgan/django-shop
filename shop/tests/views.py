@@ -18,8 +18,6 @@ class ProductDetailViewTestCase(TestCase):
 
         self.product = Product()
         self.product.name = 'test'
-        self.product.short_description = 'test'
-        self.product.long_description = 'test'
         self.product.unit_price = Decimal('1.0')
         self.product.save()
 

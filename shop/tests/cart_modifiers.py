@@ -38,8 +38,6 @@ class CartModifiersTestCase(TestCase):
         self.product = Product()
         self.product.name = "TestPrduct"
         self.product.slug = "TestPrduct"
-        self.product.short_description = "TestPrduct"
-        self.product.long_description = "TestPrduct"
         self.product.active = True
         self.product.unit_price = self.PRODUCT_PRICE
         self.product.save()
