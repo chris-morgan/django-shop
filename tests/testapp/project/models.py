@@ -26,6 +26,3 @@ class ProductVariation(Product):
 
     def get_name(self):
         return "%s - %s" % (self.baseproduct.name, self.name,)
-
-
-

@@ -12,12 +12,12 @@ MANAGERS = ADMINS
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': 'test.sqlite',                      # Or path to database file if using sqlite3.
-        'USER': '',                      # Not used with sqlite3.
-        'PASSWORD': '',                  # Not used with sqlite3.
-        'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.
-        'PORT': '',                      # Set to empty string for default. Not used with sqlite3.
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': 'test.sqlite',
+        'USER': '',
+        'PASSWORD': '',
+        'HOST': '',
+        'PORT': '',
     }
 }
 
@@ -77,13 +77,14 @@ MIDDLEWARE_CLASSES = [
 ]
 
 import django
-if django.VERSION[0] < 1 or django.VERSION[1] <3:
+if django.VERSION[0] < 1 or django.VERSION[1] < 3:
     MIDDLEWARE_CLASSES.append('cbv.middleware.DeferredRenderingMiddleware')
 
 ROOT_URLCONF = 'testapp.urls'
 
 TEMPLATE_DIRS = (
-    # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
+    # Put strings here, like "/home/html/django_templates" or
+    # "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
 )
@@ -98,17 +99,22 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
     'django.contrib.admindocs',
-    'polymorphic', # We need polymorphic installed for the shop
-    'shop', # The django SHOP application
+    'polymorphic',  # We need polymorphic installed for the shop
+    'shop',  # The django SHOP application
     'shop.addressmodel',
-    'project', # the test project application
+    'project',  # the test project application
 )
 
 # The shop settings:
-SHOP_CART_MODIFIERS= ['shop.cart.modifiers.rebate_modifiers.BulkRebateModifier']
-SHOP_SHIPPING_BACKENDS=['shop.shipping.backends.flat_rate.FlatRateShipping']
-SHOP_PAYMENT_BACKENDS=[
-    'shop.payment.backends.pay_on_delivery.PayOnDeliveryBackend']
+SHOP_CART_MODIFIERS = [
+        'shop.cart.modifiers.rebate_modifiers.BulkRebateModifier'
+        ]
+SHOP_SHIPPING_BACKENDS = [
+        'shop.shipping.backends.flat_rate.FlatRateShipping'
+        ]
+SHOP_PAYMENT_BACKENDS = [
+        'shop.payment.backends.pay_on_delivery.PayOnDeliveryBackend'
+        ]
 
 # Shop module settings
-SHOP_SHIPPING_FLAT_RATE = '10' # That's just for the flat rate shipping backend
+SHOP_SHIPPING_FLAT_RATE = '10'  # That's for the flat rate shipping backend

@@ -18,7 +18,8 @@ class OrderPaymentInline(LocalizeDecimalFieldsMixin, admin.TabularInline):
     extra = 0
 
 
-class ExtraOrderPriceFieldInline(LocalizeDecimalFieldsMixin, admin.TabularInline):
+class ExtraOrderPriceFieldInline(LocalizeDecimalFieldsMixin,
+        admin.TabularInline):
     model = ExtraOrderPriceField
     extra = 0
 

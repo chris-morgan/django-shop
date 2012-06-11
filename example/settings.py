@@ -11,12 +11,12 @@ MANAGERS = ADMINS
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': 'database.db',                      # Or path to database file if using sqlite3.
-        'USER': '',                      # Not used with sqlite3.
-        'PASSWORD': '',                  # Not used with sqlite3.
-        'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.
-        'PORT': '',                      # Set to empty string for default. Not used with sqlite3.
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': 'database.db',
+        'USER': '',
+        'PASSWORD': '',
+        'HOST': '',
+        'PORT': '',
     }
 }
 
@@ -94,14 +94,15 @@ MIDDLEWARE_CLASSES = [
         'django.contrib.messages.middleware.MessageMiddleware',
         ]
 
-import django # A quick and very dirty test to see if it's 1.3 yet...
+import django  # A quick and very dirty test to see if it's 1.3 yet...
 if django.VERSION[0] < 1 or django.VERSION[1] < 3:
     MIDDLEWARE_CLASSES.append('cbv.middleware.DeferredRenderingMiddleware')
 
 ROOT_URLCONF = 'example.urls'
 
 TEMPLATE_DIRS = (
-    # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
+    # Put strings here, like "/home/html/django_templates" or
+    # "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
 )
@@ -134,10 +135,10 @@ INSTALLED_APPS = (
     # Uncomment the next line to enable admin documentation:
     'django.contrib.admindocs',
     'south',
-    'polymorphic', # We need polymorphic installed for the shop
-    'shop', # The django SHOP application
+    'polymorphic',  # We need polymorphic installed for the shop
+    'shop',  # The django SHOP application
     'shop.addressmodel',
-    'myshop', # the project we just created
+    'myshop',  # the project we just created
 )
 
 # A sample logging configuration. The only tangible logging
@@ -155,7 +156,7 @@ LOGGING = {
         }
     },
     'loggers': {
-        'django.request':{
+        'django.request': {
             'handlers': ['mail_admins'],
             'level': 'ERROR',
             'propagate': True,

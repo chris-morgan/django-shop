@@ -208,7 +208,7 @@ class ThankYouView(LoginMixin, ShopTemplateView):
     template_name = 'shop/checkout/thank_you.html'
 
     def get_context_data(self, **kwargs):
-        ctx = super(ShopTemplateView, self).get_context_data(**kwargs)
+        ctx = super(ThankYouView, self).get_context_data(**kwargs)
 
         # Set the order status:
         order = get_order_from_request(self.request)

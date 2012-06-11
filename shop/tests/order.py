@@ -293,7 +293,8 @@ class OrderConversionTestCase(TestCase):
 
         o = Order.objects.create_from_cart(self.cart)
         oi = OrderItem.objects.filter(order=o)[0]
-        self.assertEqual(oi.product_reference, self.product.get_product_reference())
+        self.assertEqual(oi.product_reference,
+                self.product.get_product_reference())
 
 
 class OrderPaymentTestCase(TestCase):

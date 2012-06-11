@@ -10,4 +10,3 @@ urlpatterns = patterns('',
         OrderDetailView.as_view(),
         name='order_detail'),
     )
-

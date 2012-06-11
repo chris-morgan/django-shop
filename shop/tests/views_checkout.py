@@ -219,6 +219,7 @@ class CheckoutCartToOrderTestCase(TestCase):
         view = CheckoutSelectionView(request=self.request)
 
         order_from_signal = []
+
         def receiver(sender, order=None, **kwargs):
             order_from_signal.append(order)
 

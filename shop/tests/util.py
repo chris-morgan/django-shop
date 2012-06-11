@@ -13,7 +13,7 @@ from shop.util.loader import load_class
 
 
 class Mock(object):
-        pass
+    pass
 
 
 class CurrencyFieldTestCase(TestCase):

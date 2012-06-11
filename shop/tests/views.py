@@ -122,7 +122,7 @@ class CartViewTestCase(TestCase):
 
     def add_product_to_cart(self, product):
         post = {
-            'add_item_id': self.product.id,
+            'add_item_id': product.id,
             'add_item_quantity': 1,
         }
         return self.client.post(reverse('cart_item_add'), post)

@@ -359,7 +359,7 @@ class BaseOrder(models.Model):
     def is_paid(self):
         """Has this order been integrally paid for?"""
         return self.amount_paid == self.order_total
-    is_payed = is_paid #Backward compatability, deprecated spelling
+    is_payed = is_paid  # Backward compatability, deprecated spelling
 
     def is_completed(self):
         return self.status == self.COMPLETED
@@ -376,7 +376,7 @@ class BaseOrder(models.Model):
         if not result:
             result = Decimal('-1')
         return result
-    amount_payed = amount_paid #Backward compatability, deprecated spelling
+    amount_payed = amount_paid  # Backward compatability, deprecated spelling
 
     @property
     def shipping_costs(self):

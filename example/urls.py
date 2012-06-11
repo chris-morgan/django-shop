@@ -21,5 +21,5 @@ urlpatterns = patterns('',
     url(r'^$', ShopTemplateView.as_view(template_name="shop/welcome.html"),
         name='shop_welcome'),
 
-    (r'^', include(shop_urls)), # <-- That's the important bit
+    (r'^', include(shop_urls)),  # <-- That's the important bit
 )

@@ -12,6 +12,7 @@ from shop.shop_api import ShopAPI
 from shop.order_signals import completed
 from django.core.urlresolvers import reverse
 
+
 class PaymentAPI(ShopAPI):
     """
     This object's purpose is to expose an API to the shop system.
@@ -43,18 +44,17 @@ class PaymentAPI(ShopAPI):
             amount=Decimal(amount),
             transaction_id=transaction_id,
             payment_method=payment_method)
-        
+
         if save and self.is_order_paid(order):
             # Set the order status:
             order.status = Order.COMPLETED
             order.save()
             completed.send(sender=self, order=order)
-    
+
             # Empty the customers basket, to reflect that the purchase was
             # completed
             cart_object = Cart.objects.get(user=order.user)
             cart_object.empty()
-
 
     #==========================================================================
     # URLS
@@ -65,10 +65,10 @@ class PaymentAPI(ShopAPI):
         A helper for backends, so that they can call this when their job
         is finished i.e. The payment has been processed from a user perspective
         This will redirect to the "Thanks for your order" page.
-        
-        To confirm the payment, call confirm_payment before this function. 
-        For example, for PayPal IPN, the payment is confirmed upon receipt 
-        of an Instant Payment Notification, and later this function is called 
+
+        To confirm the payment, call confirm_payment before this function.
+        For example, for PayPal IPN, the payment is confirmed upon receipt
+        of an Instant Payment Notification, and later this function is called
         when the user is directed back from PayPal.
         """
         return reverse('thank_you_for_your_order')
