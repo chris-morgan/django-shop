@@ -1,12 +1,11 @@
-
-========================================
+=======================================
 Welcome to django SHOP's documentation!
-========================================
+=======================================
 
 User Manual
-============
+===========
 
-The "instructions" :)
+The "instructions". :)
 
 .. toctree::
     :maxdepth: 1
@@ -22,7 +21,7 @@ The "instructions" :)
 How to
 ======
 
-Various short articles on how to do specific things
+Various short articles on how to do specific things.
 
 .. toctree::
     :maxdepth: 2
@@ -38,7 +37,8 @@ Various short articles on how to do specific things
 Advanced how to
 ===============
 
-More focused short articles, focusing on less general and more advanced use cases.
+More focused short articles, focusing on less general and more advanced use
+cases.
 
 .. toctree::
     :maxdepth: 2
@@ -49,9 +49,9 @@ More focused short articles, focusing on less general and more advanced use case
 
 
 Reference
-==========
+=========
 
-Reference sheets and lists regarding django SHOP
+Reference sheets and lists regarding django SHOP.
 
 .. toctree::
     :maxdepth: 1

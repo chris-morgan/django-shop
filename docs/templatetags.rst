@@ -1,10 +1,10 @@
-============
-Templatetags
-============
+=============
+Template tags
+=============
 
-Django SHOP ships various templatetags to make quick creation of HTML templates
-easier. In order to use these templatetags you need to load them in your
-template
+Django SHOP ships various template tags to make quick creation of HTML
+templates easier. In order to use these templatetags you need to load them in
+your template.
 
 .. highlight:: html+django
 
@@ -16,7 +16,8 @@ Cart
 ====
 
 Renders information about the Cart object. This could be used (for example) to
-show the total amount of items currently in the cart on every page of your shop.
+show the total amount of items currently in the cart on every page of your
+shop.
 
 Usage
 -----
@@ -51,7 +52,8 @@ Product
 =======
 
 Renders information about all active products in the shop. This is useful if
-you need to display your products on pages other than just ``product_list.html``.
+you need to display your products on pages other than just
+``product_list.html``.
 
 Usage
 -----

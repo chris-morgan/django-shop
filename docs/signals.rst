@@ -8,7 +8,7 @@ Order
 .. module:: shop.order_signals
 
 The :mod:`shop.order_signals` module defines signals that are emitted during
-the checkout process
+the checkout process.
 
 .. warning::
     Currently, not all signals are emitted inside of django SHOP. This may
